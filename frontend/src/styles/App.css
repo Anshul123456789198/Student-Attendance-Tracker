@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f5f7;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     color: #333;
 }
@@ -22,14 +22,14 @@ body {
     border-radius: 15px;
     padding: 30px;
     margin-bottom: 30px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .app-header h1 {
-    color: #4F46E5;
+    color: #4a5568;
     margin-bottom: 20px;
-    font-size: 2.6em;
+    font-size: 2.5em;
 }
 
 .nav-tabs {
@@ -42,48 +42,53 @@ body {
 .nav-tabs button {
     padding: 12px 30px;
     border: none;
-    background: #e5e7eb;
-    color: #374151;
+    background: #edf2f7;
+    color: #4a5568;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .nav-tabs button:hover {
-    background: #d1d5db;
+    background: #e2e8f0;
     transform: translateY(-2px);
 }
 
 .nav-tabs button.active {
-    background: #4F46E5;
+    background: #667eea;
     color: white;
-    box-shadow: 0 4px 12px rgba(79,70,229,0.4);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .app-main {
     background: white;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     min-height: 500px;
 }
 
 .app-footer {
     text-align: center;
     margin-top: 30px;
-    color: #6B7280;
+    color: white;
     padding: 20px;
 }
 
+.app-footer p {
+    margin: 5px 0;
+}
+
+/* Add Student Styles */
 .add-student {
     max-width: 500px;
     margin: 0 auto;
 }
 
 .add-student h2 {
-    color: #4F46E5;
+    color: #4a5568;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -95,40 +100,41 @@ body {
 .form-group input {
     width: 100%;
     padding: 12px;
-    border: 2px solid #d1d5db;
+    border: 2px solid #e2e8f0;
     border-radius: 8px;
     font-size: 16px;
-    transition: 0.3s;
+    transition: border-color 0.3s ease;
 }
 
 .form-group input:focus {
     outline: none;
-    border-color: #4F46E5;
+    border-color: #667eea;
 }
 
 .add-student button {
     width: 100%;
     padding: 15px;
-    background: #10B981;
+    background: #48bb78;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .add-student button:hover:not(:disabled) {
-    background: #059669;
+    background: #38a169;
     transform: translateY(-2px);
 }
 
 .add-student button:disabled {
-    background: #9ca3af;
+    background: #a0aec0;
     cursor: not-allowed;
 }
 
+/* Attendance Styles */
 .mark-attendance {
     max-width: 800px;
     margin: 0 auto;
@@ -143,7 +149,7 @@ body {
 
 .date-selector label {
     font-weight: 600;
-    color: #374151;
+    color: #4a5568;
 }
 
 .attendance-table {
@@ -160,41 +166,42 @@ body {
 .attendance-table td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .attendance-table th {
-    background: #f3f4f6;
+    background: #f7fafc;
     font-weight: 600;
-    color: #374151;
+    color: #4a5568;
 }
 
 .attendance-table tr:hover {
-    background: #f9fafb;
+    background: #f7fafc;
 }
 
 .save-button {
     padding: 15px 30px;
-    background: #4F46E5;
+    background: #667eea;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .save-button:hover:not(:disabled) {
-    background: #4338ca;
+    background: #5a67d8;
     transform: translateY(-2px);
 }
 
 .save-button:disabled {
-    background: #9ca3af;
+    background: #a0aec0;
     cursor: not-allowed;
 }
 
+/* Report Styles */
 .report-filters {
     display: flex;
     gap: 20px;
@@ -210,12 +217,12 @@ body {
 
 .filter-group label {
     font-weight: 600;
-    color: #374151;
+    color: #4a5568;
 }
 
 .filter-group select {
     padding: 8px 12px;
-    border: 2px solid #d1d5db;
+    border: 2px solid #e2e8f0;
     border-radius: 6px;
     font-size: 14px;
 }
@@ -233,46 +240,47 @@ body {
 .detailed-report td {
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .statistics th,
 .detailed-report th {
-    background: #f3f4f6;
+    background: #f7fafc;
     font-weight: 600;
-    color: #374151;
+    color: #4a5568;
 }
 
 .present {
-    color: #10B981;
+    color: #48bb78;
     font-weight: 600;
 }
 
 .absent {
-    color: #EF4444;
+    color: #f56565;
     font-weight: 600;
 }
 
 .late {
-    color: #F59E0B;
+    color: #ed8936;
     font-weight: 600;
 }
 
 .status-present {
-    color: #10B981;
+    color: #48bb78;
     font-weight: 600;
 }
 
 .status-absent {
-    color: #EF4444;
+    color: #f56565;
     font-weight: 600;
 }
 
 .status-late {
-    color: #F59E0B;
+    color: #ed8936;
     font-weight: 600;
 }
 
+/* Message Styles */
 .message {
     padding: 10px;
     margin-top: 15px;
@@ -282,11 +290,11 @@ body {
 }
 
 .message.success {
-    background: #d1fae5;
-    color: #065f46;
+    background: #c6f6d5;
+    color: #22543d;
 }
 
 .message.error {
-    background: #fee2e2;
-    color: #7f1d1d;
+    background: #fed7d7;
+    color: #742a2a;
 }
