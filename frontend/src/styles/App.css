@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f5f7;
+    min-height: 100vh;
+    color: #333;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.app-header {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.app-header h1 {
+    color: #4F46E5;
+    margin-bottom: 20px;
+    font-size: 2.6em;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.nav-tabs button {
+    padding: 12px 30px;
+    border: none;
+    background: #e5e7eb;
+    color: #374151;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-tabs button:hover {
+    background: #d1d5db;
+    transform: translateY(-2px);
+}
+
+.nav-tabs button.active {
+    background: #4F46E5;
+    color: white;
+    box-shadow: 0 4px 12px rgba(79,70,229,0.4);
+}
+
+.app-main {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    min-height: 500px;
+}
+
+.app-footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #6B7280;
+    padding: 20px;
+}
+
+.add-student {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.add-student h2 {
+    color: #4F46E5;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4F46E5;
+}
+
+.add-student button {
+    width: 100%;
+    padding: 15px;
+    background: #10B981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-student button:hover:not(:disabled) {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+.add-student button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.mark-attendance {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.date-selector {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-selector label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.attendance-table {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.attendance-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.attendance-table th {
+    background: #f3f4f6;
+    font-weight: 600;
+    color: #374151;
+}
+
+.attendance-table tr:hover {
+    background: #f9fafb;
+}
+
+.save-button {
+    padding: 15px 30px;
+    background: #4F46E5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.save-button:hover:not(:disabled) {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+.save-button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.report-filters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.filter-group select {
+    padding: 8px 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.statistics table,
+.detailed-report table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.statistics th,
+.statistics td,
+.detailed-report th,
+.detailed-report td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.statistics th,
+.detailed-report th {
+    background: #f3f4f6;
+    font-weight: 600;
+    color: #374151;
+}
+
+.present {
+    color: #10B981;
+    font-weight: 600;
+}
+
+.absent {
+    color: #EF4444;
+    font-weight: 600;
+}
+
+.late {
+    color: #F59E0B;
+    font-weight: 600;
+}
+
+.status-present {
+    color: #10B981;
+    font-weight: 600;
+}
+
+.status-absent {
+    color: #EF4444;
+    font-weight: 600;
+}
+
+.status-late {
+    color: #F59E0B;
+    font-weight: 600;
+}
+
+.message {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.message.success {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.message.error {
+    background: #fee2e2;
+    color: #7f1d1d;
+}
